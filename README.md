@@ -7,12 +7,12 @@ Here you have the challenge for the software engineer position. You can find in 
 Refactor the FraudRadar class. You can make any changes you see that are needed in code or tests. See the tests for more information.
 
 ### Code **Requirements**:
-* All the tests must pass.
-* The code must fulfil <mark>**OOP**</mark> and <mark>**SOLID**</mark> principles.
-* The code must be **maintainable**.
-* The code must be **extensible**.
-* You must apply **defensive programming** practices.
-* Receiving the file path is not nice. Think about it and change the signature, let's make it cooler.
+* All the tests must pass.:white_check_mark:
+* The code must fulfil <mark>**OOP**</mark> and <mark>**SOLID**</mark> principles.:white_check_mark:
+* The code must be **maintainable**.:white_check_mark:
+* The code must be **extensible**.:white_check_mark:
+* You must apply **defensive programming** practices.:white_check_mark:
+* Receiving the file path is not nice. Think about it and change the signature, let's make it cooler.:white_check_mark:
 
 
 # 2- Counting bits
