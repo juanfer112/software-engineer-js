@@ -57,20 +57,8 @@ class FraudRadar {
 
                     for (let j = i + 1; j < orders.length; j++) {
                         isFraudulent = false
-                        if (current.dealId === orders[j].dealId
-                            && current.email === orders[j].email
-                            && current.creditCard !== orders[j].creditCard) {
-                            isFraudulent = true
-                            }
-                        
-                        if (current.dealId === orders[j].dealId
-                            && current.state === orders[j].state
-                            && current.zipCode === orders[j].zipCode
-                            && current.street === orders[j].street
-                            && current.city === orders[j].city
-                            && current.creditCard !== orders[j].creditCard) {
-                            isFraudulent = true
-                            }
+
+                        isFraudulent = (this.isFraudulentByCreditCard(current, orders, j) || this.isFraudulentByAddress(current, orders, j))
                     
                         if (isFraudulent) {
                             fraudResults.push({
@@ -84,6 +72,23 @@ class FraudRadar {
         }
         return fraudResults
     }
+
+    // Maintainable + Extensible + Single responsibility principle
+    static isFraudulentByCreditCard (current, orders, position) {
+        return current.dealId === orders[position].dealId &&
+            current.email === orders[position].email &&
+            current.creditCard !== orders[position].creditCard
+    }
+
+    static isFraudulentByAddress (current, orders, position) {
+        return current.dealId === orders[position].dealId &&
+            current.state === orders[position].state &&
+            current.zipCode === orders[position].zipCode &&
+            current.street === orders[position].street &&
+            current.city === orders[position].city &&
+            current.creditCard !== orders[position].creditCard
+    }
+
 }
 
 module.exports =  FraudRadar 
