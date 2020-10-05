@@ -27,6 +27,25 @@ describe('PositiveBitCounter', function () {
     let actual = PositiveBitCounter.count(161)
     assert.deepEqual(actual, expected)
   })
+  // Test bonus added
+
+  it('Should return the expected count for input = 3', function () {
+    let expected = [2, 0, 1]
+    let actual = PositiveBitCounter.count(3)
+    assert.deepEqual(actual, expected)
+  })
+
+   it('Should return the expected count for input = 13', function () {
+    let expected = [3, 0, 2, 3]
+    let actual = PositiveBitCounter.count(13)
+    assert.deepEqual(actual, expected)
+  })
+
+   it('Should return the expected count for input = 666', function () {
+    let expected = [5, 1, 3, 4, 7, 9]
+    let actual = PositiveBitCounter.count(666)
+    assert.deepEqual(actual, expected)
+  })
   
 })
 
