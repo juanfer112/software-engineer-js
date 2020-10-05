@@ -27,5 +27,6 @@ describe('PositiveBitCounter', function () {
     let actual = PositiveBitCounter.count(161)
     assert.deepEqual(actual, expected)
   })
+  
 })
 
