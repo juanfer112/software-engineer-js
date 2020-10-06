@@ -29,4 +29,11 @@ describe('Fraud Radar', function () {
     assert.ok(result)
     assert.equal(result.length, 2)
   })
+
+  // TEST ADDED PLUS, VERIFY 
+  it('Should process the no line file', function () {
+    const result = FraudRadar.check('NoLinesFile.txt')
+    assert.ok(result)
+    assert.equal(result.length, 0)
+  })
 })
